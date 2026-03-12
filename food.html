@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favourite Food – My Hobby Site</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav aria-label="Main navigation">
+    <div class="nav-top">
+      <span class="nav-brand">My Hobby Site</span>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile">
+        <!-- icon injected by JS -->
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Photography</a></li>
+        <li><a href="food.html" class="active">Favourite Food</a></li>
+        <li><a href="place.html">Favourite Place</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="nav-mobile" id="nav-mobile" role="navigation">
+      <a href="index.html">Photography</a>
+      <a href="food.html" class="active">Favourite Food</a>
+      <a href="place.html">Favourite Place</a>
+    </div>
+  </nav>
+
+  <!-- ===== Page Content ===== -->
+  <main class="page">
+
+    <h1>My Favorite Food: Pizza</h1>
+    <p class="subtitle">A slice of happiness in every bite.</p>
+
+    <img src="assets/pizza.jpeg" alt="Freshly baked pizza" />
+
+    <p class="body-text">
+      Pizza is one of the most beloved foods on the planet, enjoyed by billions of people across
+      every culture and continent. Its magic lies in its simplicity — a crispy crust, a rich
+      tomato base, melted cheese, and an endless array of toppings that can be mixed and matched
+      to suit any palate.
+    </p>
+    <p class="body-text">
+      Whether it is a thin Neapolitan slice fresh from a wood-fired oven in Naples or a thick,
+      loaded deep-dish from Chicago, every style of pizza tells a different story.
+    </p>
+
+    <h2>My Favourite Toppings</h2>
+    <ul class="disc-list">
+      <li>Extra mozzarella cheese</li>
+      <li>Spicy pepperoni</li>
+      <li>Roasted red peppers</li>
+      <li>Caramelised onions</li>
+      <li>Fresh basil leaves</li>
+      <li>A drizzle of truffle oil</li>
+    </ul>
+
+    <img src="assets/pizza2.jpeg" alt="Pizza being prepared" class="my-img" />
+
+    <h2>How to Make a Classic Margherita Pizza</h2>
+    <ol class="decimal-list">
+      <li>Mix flour, yeast, salt, and warm water to form a smooth dough</li>
+      <li>Knead for 10 minutes, then let it rise for at least 1 hour</li>
+      <li>Roll the dough into a round base, about 30 cm wide</li>
+      <li>Spread crushed San Marzano tomatoes evenly over the base</li>
+      <li>Tear fresh mozzarella and scatter over the sauce</li>
+      <li>Bake at the highest oven temperature for 8–10 minutes</li>
+      <li>Top with fresh basil and a drizzle of olive oil before serving</li>
+    </ol>
+
+    <p class="highlight-box green-text">
+      <strong>Fun Fact:</strong> Approximately
+      <span class="highlight-number">5 billion</span> pizzas
+      are sold worldwide every year — that is roughly 650 million kilograms of cheese!
+    </p>
+
+    <h2>Explore Pizza Further</h2>
+    <ul class="link-list">
+      <li>
+        <a href="https://www.seriouseats.com/the-pizza-lab" target="_blank" rel="noreferrer">
+          The Pizza Lab – Serious Eats
+        </a>
+        – Deep-dive science and technique behind perfect pizza
+      </li>
+      <li>
+        <a href="https://www.pizzamakersforum.com/" target="_blank" rel="noreferrer">
+          Pizza Makers Forum
+        </a>
+        – Community of home and professional pizza makers
+      </li>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Pizza" target="_blank" rel="noreferrer">
+          Pizza – Wikipedia
+        </a>
+        – History and varieties of pizza around the world
+      </li>
+    </ul>
+
+  </main>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

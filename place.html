@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favourite Place – My Hobby Site</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav aria-label="Main navigation">
+    <div class="nav-top">
+      <span class="nav-brand">My Hobby Site</span>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile">
+        <!-- icon injected by JS -->
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Photography</a></li>
+        <li><a href="food.html">Favourite Food</a></li>
+        <li><a href="place.html" class="active">Favourite Place</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="nav-mobile" id="nav-mobile" role="navigation">
+      <a href="index.html">Photography</a>
+      <a href="food.html">Favourite Food</a>
+      <a href="place.html" class="active">Favourite Place</a>
+    </div>
+  </nav>
+
+  <!-- ===== Page Content ===== -->
+  <main class="page font-serif">
+
+    <h1>My Favorite Place: The Beach</h1>
+    <p class="subtitle">Where the land meets the sea and time stands still.</p>
+
+    <img src="assets/places.jpeg" alt="Tropical beach with clear blue water" />
+
+    <p class="body-text">
+      There is something deeply restorative about standing at the edge of the ocean. The rhythmic
+      crash of waves, the salty breeze brushing your face, and the endless horizon stretching out
+      before you — the beach is a place where stress simply dissolves.
+    </p>
+    <p class="body-text">
+      My favourite beach is a quiet cove that most tourists never find. Soft white sand, clear
+      turquoise water, and the occasional call of a seabird are its only features — and honestly,
+      that is everything.
+    </p>
+
+    <h2>What Makes the Beach Special</h2>
+    <ul class="disc-list">
+      <li>The calming sound of waves crashing on the shore</li>
+      <li>Stunning golden-hour sunsets that paint the sky</li>
+      <li>Rich marine life visible through crystal-clear water</li>
+      <li>The sense of freedom that only open water can give</li>
+      <li>Stargazing with zero light pollution on clear nights</li>
+    </ul>
+
+    <img src="assets/places2.jpeg" alt="Sunset over the ocean" class="my-img" />
+
+    <h2>My Perfect Beach Day — Step by Step</h2>
+    <ol class="decimal-list">
+      <li>Arrive early to claim a peaceful spot before the crowds</li>
+      <li>Set up a hammock between two palm trees</li>
+      <li>Swim in the morning when the water is warmest and calmest</li>
+      <li>Read a book in the shade during peak afternoon sun</li>
+      <li>Walk along the shoreline and look for interesting shells</li>
+      <li>Photograph the sunset from the water's edge</li>
+      <li>End the day with a beachside meal of fresh seafood</li>
+    </ol>
+
+    <p class="highlight-box">
+      <strong>Did You Know?</strong> The ocean covers over
+      <span class="highlight-number">70%</span>
+      of the Earth's surface and contains 97% of all water on our planet.
+      Every beach is a doorway into that vast, mysterious world.
+    </p>
+
+    <h2>Plan Your Beach Visit</h2>
+    <ul class="link-list">
+      <li>
+        <a href="https://www.tripadvisor.com/Beaches" target="_blank" rel="noreferrer">
+          TripAdvisor – Best Beaches
+        </a>
+        – Discover top-rated beaches worldwide
+      </li>
+      <li>
+        <a href="https://www.surfertoday.com/surfing/surf-spot-finder" target="_blank" rel="noreferrer">
+          Surf Spot Finder
+        </a>
+        – Find the perfect wave near you
+      </li>
+      <li>
+        <a href="https://oceanservice.noaa.gov/" target="_blank" rel="noreferrer">
+          NOAA Ocean Service
+        </a>
+        – Learn about ocean science and conservation
+      </li>
+    </ul>
+
+  </main>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

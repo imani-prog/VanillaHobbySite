@@ -1,0 +1,355 @@
+/* ============================================================
+   Global Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #111;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   Navbar
+   ============================================================ */
+nav {
+  background-color: #1e3a8a; /* blue-900 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+}
+
+.nav-brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: 0.01em;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #fde68a; /* amber-200 */
+}
+
+.nav-links a.active {
+  color: #fbbf24; /* amber-400 */
+  border-bottom-color: #fbbf24;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0.25rem;
+}
+
+.hamburger svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  display: block;
+}
+
+/* Mobile dropdown */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #1d4ed8; /* blue-800-ish */
+  padding: 0 1rem 1rem;
+}
+
+.nav-mobile.open {
+  display: flex;
+}
+
+.nav-mobile a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #3b5bdb;
+}
+
+.nav-mobile a:last-child {
+  border-bottom: none;
+}
+
+.nav-mobile a.active {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+/* ============================================================
+   Responsive breakpoint — mobile
+   ============================================================ */
+@media (max-width: 639px) {
+  .nav-top {
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-brand {
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Page Content Container
+   ============================================================ */
+.page {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+@media (max-width: 639px) {
+  .page {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* ============================================================
+   Typography — serif pages (Photography, Place)
+   ============================================================ */
+.font-serif {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* ============================================================
+   Headings
+   ============================================================ */
+.page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d4ed8; /* blue-700 */
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.page .subtitle {
+  font-size: 1.125rem;
+  color: #6b7280; /* gray-500 */
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.page h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1e3a8a; /* blue-800 */
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 639px) {
+  .page h1 {
+    font-size: 1.875rem;
+  }
+
+  .page .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .page h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================================
+   Images
+   ============================================================ */
+.page img {
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.page img.my-img {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 639px) {
+  .page img {
+    margin-bottom: 1.25rem;
+  }
+
+  .page img.my-img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ============================================================
+   Body paragraphs
+   ============================================================ */
+.page p.body-text {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151; /* gray-700 */
+  margin-bottom: 1rem;
+}
+
+.page p.body-text + p.body-text {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 639px) {
+  .page p.body-text {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   Lists
+   ============================================================ */
+.page ul.disc-list,
+.page ol.decimal-list {
+  padding-left: 1.5rem;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+.page ul.disc-list {
+  list-style-type: disc;
+}
+
+.page ol.decimal-list {
+  list-style-type: decimal;
+}
+
+@media (max-width: 639px) {
+  .page ul.disc-list,
+  .page ol.decimal-list {
+    font-size: 0.875rem;
+  }
+}
+
+/* ============================================================
+   Blockquote
+   ============================================================ */
+.page blockquote {
+  border-left: 4px solid #3b82f6; /* blue-500 */
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #1e3a8a; /* blue-900 */
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 639px) {
+  .page blockquote {
+    font-size: 1rem;
+    margin: 1.25rem 0;
+  }
+}
+
+/* ============================================================
+   Highlight Box (Fun Fact / Did You Know)
+   ============================================================ */
+.highlight-box {
+  background-color: #dbeafe; /* blue-100 */
+  border: 1px solid #93c5fd; /* blue-300 */
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: #1e3a8a; /* blue-900 */
+  margin: 1.5rem 0;
+}
+
+.highlight-box.green-text {
+  color: #14532d; /* green-900 */
+}
+
+.highlight-box .highlight-number {
+  color: #1d4ed8; /* blue-700 */
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 639px) {
+  .highlight-box {
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    margin: 1.25rem 0;
+  }
+
+  .highlight-box .highlight-number {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   Resource / Link Lists
+   ============================================================ */
+.page .link-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.page .link-list a {
+  color: #2563eb; /* blue-600 */
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.15s;
+}
+
+.page .link-list a:hover {
+  color: #1e40af; /* blue-800 */
+}
+
+@media (max-width: 639px) {
+  .page .link-list {
+    font-size: 0.875rem;
+  }
+}
